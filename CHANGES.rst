@@ -1,3 +1,7 @@
+1.0.4
+-----
+- Fixed popup closure when selecting an instance.
+
 1.0.3
 -----
 - Python 2.6 compatibility (added ordinal to string format). @danieljb

@@ -77,13 +77,6 @@ class GfkLookupWidget(django.forms.Widget):
                 # one.
                 continue
 
-            # The django.contrib.admin.widgets.ForeignKeyRawIdWidget has some
-            # introspection to get the query params. I don't understand it, so,
-            # TODO: Work out query parameter introspection.
-            #
-            # What does 't' stand for?
-            url += '?t={0}'.format(ct_field.rel.get_related_field().name)
-
             urls[type_name] = url
 
         # JavaScript braces need to be doubled due to the string formatting.
