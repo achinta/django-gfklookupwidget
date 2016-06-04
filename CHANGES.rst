@@ -1,6 +1,7 @@
 1.0.4
 -----
 - Fixed popup closure when selecting an instance.
+- Fixed search icon for the newer admin.
 
 1.0.3
 -----
