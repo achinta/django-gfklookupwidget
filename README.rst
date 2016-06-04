@@ -6,7 +6,13 @@ A widget to replace the object_id in a `generic relation`_ with a search link.
 It will open a popup to select a related item based on the content_type field.
 It supports inlines.
 
-There's a screenshot_.
+There's a screenshot_. If you'd like to see it running, I created a Docker
+image. ::
+
+    docker run --publish 8000:8000 mqsoh/django-gfklookupwidget
+
+You can access the admin at localhost:8000/admin and the credentials are
+admin/admin. If you create a new TaggedItem, you'll see the widget.
 
 
 Installation
@@ -31,7 +37,7 @@ PositiveIntegerField and you can use it as the object_id.::
     class TaggedItem(models.Model):
         tag = models.SlugField()
         content_type = models.ForeignKey(ContentType)
-        object_id = gfklookupwidget.fields.GfkLookupField('item_type')
+        object_id = gfklookupwidget.fields.GfkLookupField('content_type')
         content_object = generic.GenericForeignKey('content_type', 'object_id')
 
 
