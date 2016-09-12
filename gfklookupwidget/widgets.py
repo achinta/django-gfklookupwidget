@@ -141,5 +141,4 @@ class GfkLookupWidget(django.forms.Widget):
             value=value,
             urls=json.dumps(urls),
             ct_field_name=self.ct_field_name,
-            find_image=django.contrib.admin.templatetags.admin_static.static('admin/img/selector-search.gif'),
         ))
