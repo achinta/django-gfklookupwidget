@@ -1,3 +1,7 @@
+1.0.5
+-----
+- Removed unused parameter in the string format for the widget JavaScript.
+
 1.0.4
 -----
 - Fixed popup closure when selecting an instance.
