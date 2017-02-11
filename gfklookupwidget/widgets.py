@@ -97,7 +97,9 @@ class GfkLookupWidget(django.forms.Widget):
         # box.
         return django.utils.safestring.mark_safe("""
             <input class="vForeignKeyRawIdAdminField" id="id_{name}" name="{name}" value="{value}" type="text" />
-            <a id="lookup_id_{name}" class="related-lookup gfklookup" onclick="return gfklookupwidget_{uniq}_click(django.jQuery, this, event);"></a>
+            <a id="lookup_id_{name}" class="related-lookup gfklookup" onclick="return gfklookupwidget_{uniq}_click(django.jQuery, this, event);">
+                <img src="/static/admin/img/selector-search.gif" width="16" height="16" alt="Lookup">
+            </a>
             <script type="text/javascript">
                 if (typeof(gfklookupwidget_{uniq}_click) == 'undefined') {{
                     function gfklookupwidget_{uniq}_click($, element, event) {{
